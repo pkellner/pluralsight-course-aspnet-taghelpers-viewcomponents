@@ -1,0 +1,34 @@
+﻿@using WebAppTagHelper.Models
+@using WebAppTagHelper.TagHelpers
+@{
+    ViewData["Title"] =
+        "Tag Helper Simple Example";
+}
+
+@{
+    Speaker speaker = new Speaker
+    {
+        SpeakerId = 1124,
+        UserLastName = "Crockford",
+        UserFirstName = "Douglas",
+        Company = "PayPal"
+    };
+}
+
+
+<div class="container">
+  
+    <SpeakerTrack track-name="JavaScript">
+        <SpeakerCard speaker="@speaker"></SpeakerCard>
+        <SpeakerCard speaker="@speaker"></SpeakerCard>
+        <SpeakerCard speaker="@speaker"></SpeakerCard>
+        <SpeakerCard speaker="@speaker"></SpeakerCard>
+    </SpeakerTrack>
+    
+    <SpeakerTrack track-name="Microservices">
+        <SpeakerCard speaker="@speaker"></SpeakerCard>
+        <SpeakerCard speaker="@speaker"></SpeakerCard>
+    </SpeakerTrack>
+ 
+
+</div>
