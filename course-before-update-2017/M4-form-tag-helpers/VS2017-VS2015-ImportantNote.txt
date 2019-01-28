@@ -1,0 +1,31 @@
+When I first started working on this Tag Helpers course, ASP.NET Core 
+was still in preview release and the only IDE available to build Tag 
+Helpers was Visual Studio 2015 with pre-release tooling.  Since then,
+a lot has changed.
+
+First, I want to be 100% clear that everything in this course is based
+on the production released version of ASP.NET Core Version 1.  All 
+the demonstrations I show during this course are built with Visual 
+Studio 2015 which included a pre-release of the ASP.NET Core tooling.
+ 
+Now that Visual Studio 2017 has been released, Microsoft has chosen not 
+to support the pre-release tooling in Visual Studio 2015 for ASP.NET Core,
+and has gone on to recommend that all ASP.NET Core development be done 
+in Visual Studio 2017.
+
+To insure that you will be able to run the demonstration on your computer 
+in a Microsoft supported configuration, I’ve include all the download files,
+that is the visual studio projects associated with each module, in Visual 
+Studio 2017 format.
+
+After installing Visual Studio 2017, you will still need to install the
+“Razor Languages Service” extension using nuget.  The projects will work
+without this extension, but you will miss out some nice Tag Helper
+extensions that I use throughout the course using the older pre-release
+version of Visual Studio. Again, everything I show in Tag Helpers in this 
+course is exactly what you will find when developing with Visual Studio 2017
+and ASP.NET Core Version 1.
+
+If you do have any issues, feel free to contact me by way of the discussion 
+section in this course and I’ll do my best to help get your on your way to 
+learning Tag Helpers.

@@ -1,0 +1,19 @@
+body {
+  padding: 25px;
+}
+
+.main-wrapper {
+  font-size: 14px;
+  font-family: 'Lato', sans-serif;
+  color:#666666;
+  max-width: 500px;
+  width: 100%;
+}
+
+.main-wrapper .form {
+  display: block;
+}
+
+.license-label {
+  font-weight: 400;
+}

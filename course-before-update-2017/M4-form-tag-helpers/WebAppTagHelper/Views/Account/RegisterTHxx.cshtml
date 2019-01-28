@@ -1,0 +1,92 @@
+@model WebAppTagHelper.Models.AccountViewModels.RegisterViewModel
+
+@{
+    ViewData["Title"] = "RegisterTH";
+}
+
+<form asp-action="RegisterTH">
+    <div class="form-horizontal">
+        <h4>Register</h4>
+        <hr />
+
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Email" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="FirstName" class="col-md-2 control-label">First Name</label>
+            <div class="col-md-10">
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="LastName" class="col-md-2 control-label">Last Name</label>
+            <div class="col-md-10">
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Password" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ConfirmPassword" class="col-md-2 control-label">Confirm Password</label>
+            <div class="col-md-10">
+                <input asp-for="ConfirmPassword" class="form-control" />
+                <span asp-validation-for="ConfirmPassword" class="text-danger" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="RegisterAddress.State" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="RegisterAddress.State" class="form-control" />
+                <span asp-validation-for="RegisterAddress.State" class="text-danger" />
+            </div>
+        </div>
+
+       
+        <div class="form-group">
+            <label asp-for="CountryCode" class="col-md-2 control-label">Country</label>
+            <select class="form-control" asp-for="CountryCode" asp-items="ViewBag.Countries">
+            </select>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <div class="checkbox">
+                    <input asp-for="SpecialMeal" />
+                    <label asp-for="SpecialMeal"></label>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
