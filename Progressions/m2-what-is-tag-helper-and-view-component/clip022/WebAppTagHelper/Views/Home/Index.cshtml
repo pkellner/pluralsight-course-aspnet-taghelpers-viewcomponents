@@ -1,0 +1,19 @@
+﻿<link href="~/css/bootstrap.css" rel="stylesheet" />
+<link href="~/css/site.css" rel="stylesheet" />
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@{
+    var speaker = new List<Speaker>();
+}
+
+<div class="container">
+    <speaker-track track-name="JavaScript">
+        <speaker-card speaker=@speaker[0]></speaker-card>
+        <speaker-card speaker=@speaker[1]></speaker-card>
+        <speaker-card speaker=@speaker[2]></speaker-card>
+        <speaker-card speaker=@speaker[3]></speaker-card>
+    </speaker-track>
+</div>
