@@ -1,4 +1,6 @@
-# Notes On How This Project Was Created
+# What is a Tag Helper
+
+## Notes On How This Project Was Created
 
 Because this is an introductory module, full details are not shown for how to create the project that is here.  That is, the Tag Helpers (img, Speaker-Card and Speaker-Track) are not detailed in the course for how they were created.  If you want to create this project yourself, here are the steps.
 
