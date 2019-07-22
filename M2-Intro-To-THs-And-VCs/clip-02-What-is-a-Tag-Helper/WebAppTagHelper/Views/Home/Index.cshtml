@@ -1,0 +1,54 @@
+﻿@using WebAppTagHelper.Models
+@{
+    ViewData["Title"] = "Tag Helper Simple Example";
+}
+
+@{
+    List<Speaker> speakers = new List<Speaker>
+{
+        new Speaker
+        {
+            SpeakerId = 1124,
+            UserFirstName = "Douglas",
+            UserLastName = "Crockford",
+            TrackName = "JavaScript",
+            Company = "PayPal"
+        },
+        new Speaker
+        {
+            SpeakerId = 823,
+            UserFirstName = "Kevin",
+            UserLastName = "Nilson",
+            TrackName = "JavaScript",
+            Company = "Google"
+        },
+        new Speaker
+        {
+            SpeakerId = 6548,
+            UserFirstName = "Steve",
+            UserLastName = "Souders",
+            TrackName = "JavaScript",
+            Company = "SpeedCurver"
+        }
+    };
+}
+
+@{
+    Speaker speaker = new Speaker
+    {
+        SpeakerId = 1124,
+        UserLastName = "Crockford",
+        UserFirstName = "Douglas",
+        Company = "PayPal"
+    };
+}
+
+    <SpeakerTrack track-name="JavaScript">
+        <SpeakerCard speaker=@speakers[0]></SpeakerCard>
+        <SpeakerCard speaker=@speakers[1]></SpeakerCard>
+        <SpeakerCard speaker=@speakers[2]></SpeakerCard>
+    </SpeakerTrack>
+
+@*<img src="images/high-tech.png" asp-append-version="true"
+    alt="High Tech" />*@
+

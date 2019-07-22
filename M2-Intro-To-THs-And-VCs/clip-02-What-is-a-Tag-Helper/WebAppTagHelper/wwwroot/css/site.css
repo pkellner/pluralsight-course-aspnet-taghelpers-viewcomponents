@@ -1,0 +1,159 @@
+﻿/* This Section added for Pluralsight Tag Helpers and View Components Course*/
+
+.track {
+    margin: 30px auto;
+}
+
+.card {
+    padding: 25px 15px 15px 15px;
+    border: none;
+    transition: .3s;
+    margin: 30px 0;
+}
+
+    .card:hover {
+        top: -6px;
+        -moz-box-shadow: 0 20px 30px rgba(0,0,0,0.1);
+        -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 20px 30px rgba(0,0,0,0.1);
+    }
+
+div p ul ol li {
+    vertical-align: baseline;
+    font-family: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+div.card-img {
+    padding: 0px 15px;
+    margin-bottom: 15px;
+}
+
+    div.card-img img {
+        width: 100%;
+    }
+
+h4.card-title {
+    letter-spacing: 0.5px;
+    font-family: Helvetica,sans-serif;
+    text-transform: capitalize;
+    font-size: 21px;
+    line-height: 21px;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+    h4.card-title a {
+        color: #444444;
+        text-decoration: none;
+    }
+
+        h4.card-title a:hover {
+            color: #00a1df !important;
+            text-decoration: none;
+        }
+
+p.card-position {
+    color: #676767;
+    margin-bottom: 0px;
+}
+
+p.card-description {
+    margin: 15px 0;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    padding: 15px 0;
+    color: #676767;
+}
+
+ul.social {
+    list-style: none;
+    padding: 0;
+}
+
+    ul.social li {
+        float: left;
+        list-style: none;
+    }
+
+        ul.social li:after {
+            content: ' / ';
+            font-size: 11px !important;
+        }
+
+        ul.social li a {
+            font-size: 11px;
+            margin: 0px 8px;
+            color: #00a1df
+        }
+
+            ul.social li a:hover {
+                color: #676767;
+                text-decoration: none;
+            }
+/* End of section added for Pluralsight Course.  Below is from Microsoft Project Build Wizard. */
+
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+

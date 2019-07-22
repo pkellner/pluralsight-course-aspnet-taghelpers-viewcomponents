@@ -1,0 +1,66 @@
+﻿@using WebAppTagHelper.Models
+@{
+    ViewData["Title"] = "Tag Helper Simple Example";
+}
+
+@{
+    List<Speaker> speakers = new List<Speaker>
+{
+        new Speaker
+        {
+            SpeakerId = 1124,
+            UserFirstName = "Douglas",
+            UserLastName = "Crockford",
+            TrackName = "JavaScript",
+            Company = "PayPal"
+        },
+        new Speaker
+        {
+            SpeakerId = 823,
+            UserFirstName = "Kevin",
+            UserLastName = "Nilson",
+            TrackName = "JavaScript",
+            Company = "Google"
+        },
+        new Speaker
+        {
+            SpeakerId = 6548,
+            UserFirstName = "Steve",
+            UserLastName = "Souders",
+            TrackName = "JavaScript",
+            Company = "SpeedCurver"
+        }
+    };
+}
+
+@{
+    Speaker speaker = new Speaker
+    {
+        SpeakerId = 1124,
+        UserLastName = "Crockford",
+        UserFirstName = "Douglas",
+        Company = "PayPal"
+    };
+}
+
+<speaker-track track-name="JavaScript">
+    <speaker-card speaker=@speakers[0]></speaker-card>
+    <speaker-card speaker=@speakers[1]></speaker-card>
+    <speaker-card speaker=@speakers[2]></speaker-card>
+</speaker-track>
+
+@*<speaker-track track-name="JavaScript">
+        @await Component.InvokeAsync("SpeakerCard", new { speaker = speakers[0] })
+        @await Component.InvokeAsync("SpeakerCard", new { speaker = speakers[1] })
+        @await Component.InvokeAsync("SpeakerCard", new { speaker = speakers[2] })
+    </speaker-track>*@
+
+@*<speaker-track track-name="JavaScript">
+        <vc:speaker-card speaker=@speakers[0]></vc:speaker-card>
+        <vc:speaker-card speaker=@speakers[1]></vc:speaker-card>
+        <vc:speaker-card speaker=@speakers[2]></vc:speaker-card>
+    </speaker-track>*@
+
+@*<img src="images/high-tech.png" asp-append-version="true"
+    alt="High Tech" />*@
+

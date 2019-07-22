@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Tag Helper Simple Example";
+}
+
+@model WebAppTagHelper.Controllers.ModelAddress
+
+<company name="Microsoft">
+    <employee name="Taylor Mullen"
+              title="Software Engineer II"></employee>
+    <employee name="Damian Edwards"
+              title="Principal Program Manager"></employee>
+    <employee name="Eilon Lipton"
+              title="Principal Group Manager"></employee>
+</company>
+
+<company name="Google">
+    <employee name="Larry Page"
+              title="Engineer Inventor"></employee>
+    <employee name="Sergey Brin"
+              title="Computer Scientist"></employee>
+</company>
+
+
+
+
+
+@Html.Label("FirstName",
+    "First Name:", new { @class = "caption" })
+
+
+
+<Label class="caption" asp-for="FirstName"></Label>
+
+<my-customer info="Igor"></my-customer>
+
+
+
+
+
