@@ -33,5 +33,38 @@
 }
 
 
+<div class="container">
+    <speaker-track track-name="JavaScript">
+        @await Component.InvokeAsync("SpeakerCard", speakers[0])
+        @await Component.InvokeAsync("SpeakerCard", speakers[1])
+        @await Component.InvokeAsync("SpeakerCard", speakers[2])
+    </speaker-track>
+</div>
 
-<speaker-card speaker="@speakers[0]"></speaker-card>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*<div class="container">
+    <speaker-track track-name="JavaScript">
+        <vc:speaker-card speaker=@speakers[0]></vc:speaker-card>
+        <vc:speaker-card speaker=@speakers[1]></vc:speaker-card>
+        <vc:speaker-card speaker=@speakers[2]></vc:speaker-card>
+    </speaker-track>
+</div>*@
+
+
+@*<speaker-card speaker="@speakers[0]"></speaker-card>*@
