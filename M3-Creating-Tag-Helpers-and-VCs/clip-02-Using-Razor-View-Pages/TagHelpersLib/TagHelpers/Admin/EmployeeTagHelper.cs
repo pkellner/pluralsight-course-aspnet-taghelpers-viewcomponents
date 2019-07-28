@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Razor.TagHelpers;
 
-namespace WebAppTagHelper.TagHelpers
+namespace TagHelpersLib.TagHelpers
 {
     [HtmlTargetElement("employee", Attributes = "name,title",ParentTag = "company")]
     public class EmployeeTagHelper : TagHelper

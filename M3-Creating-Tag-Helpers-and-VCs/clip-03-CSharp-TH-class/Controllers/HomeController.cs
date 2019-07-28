@@ -12,7 +12,7 @@ namespace WebAppTagHelper.Controllers
     {
         public IActionResult Index()
         {
-            return View("Public/Index");
+            return View();
         }
 
         public IActionResult Privacy()

@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc.TagHelpers;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 
-namespace WebApp.TagHelpers
+namespace TagHelpersLib.TagHelpers
 {
     [HtmlTargetElement("company")]
     public class CompanyTagHelper : TagHelper
