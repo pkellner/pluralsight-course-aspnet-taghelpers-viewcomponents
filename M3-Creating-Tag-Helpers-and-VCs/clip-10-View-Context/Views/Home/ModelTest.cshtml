@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewData["Title"] = "ModelTest";
+}
+
+@model WebAppTagHelper.Controllers.HomeController.ModelAddress
+
+<h1>
+    <mod-exp helper-for="FirstName"></mod-exp>
+
+
+    @*<mod-test first-name="@Model.FirstName"
+              last-name="@Model.LastName"></mod-test>*@
+</h1>
+
