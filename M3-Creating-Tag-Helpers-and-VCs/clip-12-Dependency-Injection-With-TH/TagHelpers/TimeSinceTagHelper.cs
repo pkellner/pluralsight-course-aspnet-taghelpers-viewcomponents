@@ -15,7 +15,8 @@ namespace WebAppTagHelper.TagHelpers
             _timeSinceService = timeSinceService;
         }
 
-        public override void Process(TagHelperContext context, TagHelperOutput output)
+        public override void Process(TagHelperContext context, 
+            TagHelperOutput output)
         {
             output.Content.
                 SetContent(_timeSinceService.TimeSince(

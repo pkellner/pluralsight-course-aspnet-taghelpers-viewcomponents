@@ -2,21 +2,20 @@
     ViewData["Title"] = "Home Page";
 }
 
-@{ 
+@{
     var moonLandingDate = "07-20-1969";
 }
-<br/><br/>
-<h1>Days since Landing on the Moon</h1>
-<h2><time-since compare-date-time="@moonLandingDate"></time-since></h2>
+
+<time-since compare-date-time="@moonLandingDate"></time-since>
 
 
 
 @*<tab active-page="Sessions">
-    <tab-item title="Home"></tab-item>
-    <tab-item title="Speakers"></tab-item>
-    <tab-item title="Sessions"></tab-item>
-    <tab-item title="Registration"></tab-item>
-</tab>*@
+        <tab-item title="Home"></tab-item>
+        <tab-item title="Speakers"></tab-item>
+        <tab-item title="Sessions"></tab-item>
+        <tab-item title="Registration"></tab-item>
+    </tab>*@
 
 
 @*<div class="container">

@@ -1,5 +1,4 @@
 ﻿using System;
-
 namespace WebAppTagHelper
 {
     public class TimeSinceService : ITimeSinceService
@@ -9,13 +8,6 @@ namespace WebAppTagHelper
             var tspan = DateTime.Now.Subtract(dateTime);
             return PeriodOfTimeOutput(tspan);
         }
-
-        /// <summary>
-        /// // from: http://stackoverflow.com/questions/3383464/is-there-a-smarter-way-to-generate-time-since-with-a-datetime-objects
-        /// </summary>
-        /// <param name="tspan"></param>
-        /// <param name="level"></param>
-        /// <returns></returns>
         private string PeriodOfTimeOutput(TimeSpan tspan, int level = 0)
         {
             string how_long_ago = "ago";
