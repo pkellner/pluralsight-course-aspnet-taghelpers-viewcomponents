@@ -1,0 +1,34 @@
+﻿
+@model WebAppTagHelper.Models.Speaker
+
+
+<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+    <div class='card'>
+        <div class='card-img'>
+            <img src='static/speakers/Speaker-@(Model.SpeakerId).jpg' />
+        </div>
+        <h4 class='card-title'>
+            <a href='#'>@(Model.UserFirstName) @(Model.UserLastName)</a>
+        </h4>
+        <p class='card-position'>@(Model.Company)</p>
+        <p class='card-description'>Session time to be announced</p>
+
+        <div>SESSIONS</div>
+        <ul>
+            @foreach (var session in @Model.Sessions)
+            {
+            <li>
+                @session.Title
+            </li>
+           }
+        </ul>
+        <ul class='social'>
+            <li>
+                <a target='_blank' href='#'>LinkedIn</a>
+            </li>
+            <li>
+                <a target='_blank' href='#'>Microsoft</a>
+            </li>
+        </ul>
+    </div>
+</div>
