@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using WebAppTagHelper.Models;
-
 namespace WebAppTagHelper.Controllers
 {
     [Route("api/sessions")]
