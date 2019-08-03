@@ -5,6 +5,13 @@ using System.Threading.Tasks;
 
 namespace WebAppTagHelper.Models
 {
+    public class Session
+    {
+        public int SpeakerId { get; set; }
+        public string Title { get; set; }
+    }
+
+
     public class Speaker
     {
         public int SpeakerId { get; set; }

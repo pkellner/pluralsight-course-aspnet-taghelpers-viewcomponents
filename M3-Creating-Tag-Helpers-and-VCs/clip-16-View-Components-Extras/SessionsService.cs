@@ -7,16 +7,12 @@ using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
+using WebAppTagHelper.Models;
 
 namespace WebAppTagHelper
 {
 
-    public class Session
-    {
-        public int SpeakerId { get; set; }
-        public string Title { get; set; }
-    }
-
+  
     public class SessionsService : ISessionsService
     {
         public async Task<List<Session>> GetSessions(int speakerId,string baseUrl)

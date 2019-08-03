@@ -24,8 +24,7 @@ namespace WebAppTagHelper
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<ISessionsService, SessionsService>();
-            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-
+            
             //services.AddTransient<ITimeSinceService, TimeSinceService>();
 
 
