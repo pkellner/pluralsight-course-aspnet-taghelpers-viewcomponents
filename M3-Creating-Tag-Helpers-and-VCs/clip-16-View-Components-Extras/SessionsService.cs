@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -11,8 +9,6 @@ using WebAppTagHelper.Models;
 
 namespace WebAppTagHelper
 {
-
-  
     public class SessionsService : ISessionsService
     {
         public async Task<List<Session>> GetSessions(int speakerId,string baseUrl)

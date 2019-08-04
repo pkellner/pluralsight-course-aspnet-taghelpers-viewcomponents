@@ -14,11 +14,11 @@ namespace WebAppTagHelper.ViewComponents
         {
             _sessionsService = sessionsService;
         }
-
         public async Task<IViewComponentResult> InvokeAsync(
             Speaker speaker)
         {
-            var baseUrl = new Uri(Request.GetEncodedUrl()).GetLeftPart(UriPartial.Authority);
+            var baseUrl = 
+                new Uri(Request.GetEncodedUrl()).GetLeftPart(UriPartial.Authority);
             var sessions = await _sessionsService.GetSessions(speaker.SpeakerId, baseUrl);
             speaker.Sessions = sessions;
             return View(speaker);
