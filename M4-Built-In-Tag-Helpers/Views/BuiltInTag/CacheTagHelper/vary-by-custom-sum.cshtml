@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+@model WebAppTagHelper.Controllers.BuiltInTagController.ModelParam
+
+@{
+    Layout = "";
+}
+
+<head>
+    
+</head>
+
+@{
+    string attributeName = "vary-by";   
+}
+
+<html>
+<head>
+    <title>CacheTagHelper Attribute: @attributeName</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="~/css/main.css" property="stylesheet" rel="stylesheet" type="text/css" media="screen" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="~/js/tidy.js"></script>
+    <link href="~/css/CodeMirror.css" rel="stylesheet" />
+
+
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+
+    <style type="text/css">
+        body {
+            padding-top: 5px;
+            padding-bottom: 40px;
+        }
+
+        .container {
+            width: 90%;
+        }
+
+        div.row {
+            border: 2px solid;
+        }
+
+
+        div.row-no-border {
+            border: 0 none;
+        }
+
+        div.col {
+            border: 1px solid;
+        }
+
+        .classWithPad {
+            margin: 10px 10px 10px 10px;
+        }
+
+        .backcolor {
+            background-color: #eff0f1;
+        }
+
+        .backcolortop {
+            background: #ccc;
+        }
+    </style>
+
+
+</head>
+<body>
+    <div>
+
+        
+
+        <div class="container backcolor classWithPad">
+
+            <div class="row backcolortop">
+                <div class="col-sm-8">
+                    <h1>CacheTagHelper Attribute: @attributeName</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>Tag Helper on Page Colorized</h2>
+                    <pre id="RawTagHelperText">
+                </pre>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>Actual HTML on Page Colorized</h2>
+                    <pre id="PutHereNoJquery">
+                </pre>
+                </div>
+            </div>
+            
+            <div id="RawText" style="visibility: collapse;">
+                @Html.Raw("<Cache vary-by='")@Model.Sum@Html.Raw("'>Time Inside Cache Tag Helper : @DateTime.Now</Cache>")
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>Rendered</h2>
+                    <div class="classWithPad">
+                        <div id="DebugMe">
+                            <Cache vary-by='@Model.Sum'>Time Inside Cache Tag Helper : @DateTime.Now</Cache>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <script>
+    $(document)
+        .ready(function() {
+            var options = {
+                "indent": "auto",
+                "indent-spaces": 2,
+                "wrap": 120,
+                "markup": true,
+                "output-xml": false,
+                "numeric-entities": true,
+                "quote-marks": true,
+                "quote-nbsp": false,
+                "show-body-only": true,
+                "quote-ampersand": false,
+                "break-before-br": true,
+                "uppercase-tags": false,
+                "uppercase-attributes": false,
+                "drop-font-tags": true,
+                "tidy-mark": false
+            }
+
+            var rawTag = $("#RawText")[0].innerHTML;
+            //debugger;
+            $("#RawTagHelperText").text(rawTag.trim());
+            $("#RawTagHelperText").wrapAll('<xmp id="htmlXmp" class="prettyprint" />');
+
+            var innerHtmlNojQuery = $("div#DebugMe")[0].innerHTML;
+            var result1 = tidy_html5(innerHtmlNojQuery, options);
+            $("#PutHereNoJquery").text(result1);
+            $("#PutHereNoJquery").wrapAll('<xmp id="htmlXmp" class="prettyprint" />');
+        });
+
+    </script>
+
+
+</body>
+
+</html>
