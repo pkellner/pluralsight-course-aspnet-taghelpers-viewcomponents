@@ -30,6 +30,17 @@ namespace WebAppTagHelper
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            // Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename="C:\Users\pkellner\Downloads\aspdotnet-core-tag-helpers (1)\04\demos\M3\WebAppTagHelper\cacheTagHelperDb.mdf";Integrated Security=True;Connect Timeout=30
+
+            var cs = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog='C:\USERS\PKELLNER\DOWNLOADS\ASPDOTNET-CORE-TAG-HELPERS (1)\04\DEMOS\M3\WEBAPPTAGHELPER\CACHETAGHELPERDB.MDF';Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            services.AddDistributedSqlServerCache(opt =>
+            {
+                opt.ConnectionString = cs;
+//                    Configuration.GetConnectionString("DefaultConnection");
+                opt.SchemaName = "dbo";
+                opt.TableName = "SQLCache";
+            });
+
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
@@ -48,6 +59,8 @@ namespace WebAppTagHelper
 
             app.UseStaticFiles();
             app.UseCookiePolicy();
+
+           
 
             app.UseMvc(routes =>
             {
