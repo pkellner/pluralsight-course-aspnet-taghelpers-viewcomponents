@@ -23,26 +23,25 @@ namespace WebAppTagHelper
 
             services.AddTransient<ITimeSinceService, TimeSinceService>();
 
-            services.Configure<CookiePolicyOptions>(options =>
-            {
-                // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-                options.CheckConsentNeeded = context => true;
-                options.MinimumSameSitePolicy = SameSiteMode.None;
-            });
-
-            // Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename="C:\Users\pkellner\Downloads\aspdotnet-core-tag-helpers (1)\04\demos\M3\WebAppTagHelper\cacheTagHelperDb.mdf";Integrated Security=True;Connect Timeout=30
-
-            var cs = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog='C:\USERS\PKELLNER\DOWNLOADS\ASPDOTNET-CORE-TAG-HELPERS (1)\04\DEMOS\M3\WEBAPPTAGHELPER\CACHETAGHELPERDB.MDF';Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            var connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog='C:\USERS\PKELLNER\DOWNLOADS\ASPDOTNET-CORE-TAG-HELPERS (1)\04\DEMOS\M3\WEBAPPTAGHELPER\CACHETAGHELPERDB.MDF';Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
             services.AddDistributedSqlServerCache(opt =>
             {
-                opt.ConnectionString = cs;
-//                    Configuration.GetConnectionString("DefaultConnection");
+                opt.ConnectionString = connectionString;
                 opt.SchemaName = "dbo";
                 opt.TableName = "SQLCache";
             });
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.Configure<CookiePolicyOptions>(options =>
+            {
+                options.CheckConsentNeeded = context => true;
+                options.MinimumSameSitePolicy = SameSiteMode.None;
+            });
+
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
