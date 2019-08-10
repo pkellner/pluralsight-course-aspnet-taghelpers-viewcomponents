@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <form action="/Account/RegisterTHSimple" 
+          method="post">
+        <label for="Email" class="control-label">Email</label>
+        <input type="email" name="Email" value="Joe@Whitehouse.gov" 
+               class="form-control"/>
+        <br/>
+
+        <label for="FirstName" class="control-label">First Name</label>
+        <input id="FirstName" name="FirstName" value="Joe"
+               class="form-control" /><br/>
+
+        <input checked="checked" id="SpecialMeal" name="SpecialMeal" 
+               type="checkbox" value="true" class="checkbox" />
+        <label for="SpecialMeal" class="control-label">Special Meal
+        </label><br/>
+
+        <input type="submit" value="Save" class="btn btn-default" />
+    </form>
+</body>
+</html>

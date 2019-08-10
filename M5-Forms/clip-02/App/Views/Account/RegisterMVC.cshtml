@@ -1,0 +1,23 @@
+﻿@model App.Models.RegisterViewModel
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.LabelFor(model => model.FirstName,
+               htmlAttributes: new { @class = "control-label" })
+        @Html.EditorFor(model => model.FirstName,
+                   new { htmlAttributes = new { @class = "form-control" } })
+
+        @Html.LabelFor(model => model.SpecialMeal, 
+            htmlAttributes: new { @class = "control-label" })
+        <div class="checkbox">
+            @Html.EditorFor(model => model.SpecialMeal)
+        </div>
+
+        <input type="submit" value="Save" class="btn" />
+    }
+</body>
+</html>
