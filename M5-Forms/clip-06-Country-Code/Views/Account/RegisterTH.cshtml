@@ -1,0 +1,85 @@
+﻿@model WebAppTagHelper.Models.RegisterViewModel
+
+@{
+    ViewData["Title"] = "RegisterTH";
+}
+
+<h1>RegisterTH</h1>
+
+<h4>RegisterViewModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="RegisterTH">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FirstName" class="control-label"></label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName" class="control-label"></label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="RegisterAddress.City" class="col-md-2 control-label"></label>
+                <div class="col-md-10">
+                    <input asp-for="RegisterAddress.City" class="form-control" />
+                    <span asp-validation-for="RegisterAddress.City" class="text-danger" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="RegisterAddress.State" class="col-md-2 control-label"></label>
+                <div class="col-md-10">
+                    <input asp-for="RegisterAddress.State" class="form-control" />
+                    <span asp-validation-for="RegisterAddress.State" class="text-danger" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="RegisterAddress.PhoneNumber" class="col-md-2 control-label"></label>
+                <div class="col-md-10">
+                    <input asp-for="RegisterAddress.PhoneNumber" class="form-control"
+                           asp-format="{0:###-###-####}" />
+                    <span asp-validation-for="RegisterAddress.PhoneNumber"
+                          class="text-danger" />
+                </div>
+            </div>  
+
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConfirmPassword" class="control-label"></label>
+                <input asp-for="ConfirmPassword" class="form-control" />
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CountryCode" class="control-label"></label>
+                <input asp-for="CountryCode" class="form-control" />
+                <span asp-validation-for="CountryCode" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="SpecialMeal" /> @Html.DisplayNameFor(model => model.SpecialMeal)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
