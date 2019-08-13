@@ -21,6 +21,11 @@ namespace WebAppTagHelper.Controllers
         {
             return View();
         }
+        
+        public IActionResult Videos()
+        {
+            return View();
+        }
 
         public IActionResult  Tooling()
         {
