@@ -2,12 +2,32 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using WebAppTagHelper.Models;
 
 namespace WebAppTagHelper.Controllers
 {
     public class AccountController : Controller
     {
+
+        // POST: /Account/Register
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public IActionResult RegisterTH(
+            RegisterViewModel model, string returnUrl = null)
+        {
+            if (model.Email.ToLower() == "joe@whitehouse.gov")
+            {
+                ModelState.AddModelError(string.Empty,
+                    "joe@whitehouse.gov is already registered");
+            }
+
+            ViewData["ReturnUrl"] = returnUrl;
+            // If we got this far, something failed, redisplay form
+            return View(model);
+        }
+
         [HttpGet]
         [AllowAnonymous]
         public IActionResult RegisterTH(string returnUrl = null)
