@@ -1,0 +1,22 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Script Tag Helper";
+    Layout = "";
+}
+
+<h2>Script Tag Helper</h2>
+
+@*<script asp-src-include="/jsglobbing/**/"></script>*@
+
+<script src=https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/bootstrap.min.js
+        asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+        asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+>
+</script>
+
+<link href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" asp-fallback-href="~/lib/bootstrap/css/bootstrap.min.css" asp-fallback-test-class="hidden" asp-fallback-test-property="visibility" asp-fallback-test-value="hidden" />
+
+
+
+<script asp-src-include="/js/**/*.js" asp-src-exclude="/js/folder1/sub1"  ></script>
