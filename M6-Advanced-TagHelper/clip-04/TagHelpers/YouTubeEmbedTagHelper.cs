@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Text;
 using Microsoft.AspNetCore.Razor.TagHelpers;
-using WebAppTagHelper;
 
-namespace WebAppTagHelpler.TagHelpers
+namespace WebAppTagHelper.TagHelpers
 {
     // You may need to install the Microsoft.AspNetCore.Razor.Runtime package into your project
     [HtmlTargetElement("YouTubeEmbed")]

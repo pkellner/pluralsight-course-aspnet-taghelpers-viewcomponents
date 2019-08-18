@@ -2,7 +2,6 @@
 
 namespace WebAppTagHelper.TagHelpers
 {
-    // You may need to install the Microsoft.AspNetCore.Razor.Runtime package into your project
     [HtmlTargetElement("YouTubeEmbed")]
     public class YouTubeEmbedTagHelper : TagHelper
     {
@@ -18,13 +17,10 @@ namespace WebAppTagHelper.TagHelpers
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {
             output.TagName = "div";
-
             _scriptManager.AddScript(
                 new ScriptReference("https://code.jquery.com/jquery-1.10.2.min.js", 1000));
             _scriptManager.AddScript(
                 new ScriptReference("/js/jquery.nonSuckyYouTubeEmbed.js", 1000));
-
-
 
             output.Attributes.Add(new TagHelperAttribute("youtubeid", YouTubeId));
             output.Attributes.Add(new TagHelperAttribute("class", "nsyte"));

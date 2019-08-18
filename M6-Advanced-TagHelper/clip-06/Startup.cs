@@ -31,8 +31,6 @@ namespace WebAppTagHelper
                 opt.TableName = "SQLCache";
             });
 
-            //services.AddScoped<IScriptManager, ScriptManager>(); // lifetime of http request 
-
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             services.AddSingleton<IScriptManager>(new ScriptManager());
@@ -42,8 +40,6 @@ namespace WebAppTagHelper
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-
-
 
         }
 
